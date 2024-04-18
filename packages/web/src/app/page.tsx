@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export default async function Home() {
-  const response = await (await fetch("http://localhost:8787/")).text();
+  const response = await (await fetch(process.env.API)).text();
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
